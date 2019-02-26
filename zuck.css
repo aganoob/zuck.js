@@ -6,15 +6,15 @@
 
 .stories.carousel{white-space:nowrap;overflow:auto;-webkit-overflow-scrolling:touch;overflow-scrolling:touch;}
 .stories.carousel::-webkit-scrollbar { width: 0px;background: transparent;}
-.stories.carousel .story{display:inline-block;width:18vw;max-width:90px;margin:0 6px;}
-.stories.carousel .story:first-child{margin-left:0;}
+.stories.carousel .story{display:inline-block;width:50vmin;max-width:100vmin;margin:0vmin 2vh;}
+.stories.carousel .story:first-child{margin-left:23vmin;}
 .stories.carousel .story:last-child{margin-right:0;}
 
 .stories.carousel .story > a {text-align:center;display:block;}
 .stories.carousel .story > a:active > .img {transform: scale(0.9);}
-.stories.carousel .story > a > .img {display:block;box-sizing:border-box;font-size:0;max-height:90px;height:18vw;overflow:hidden;transition: transform 0.2s;}
+.stories.carousel .story > a > .img {display:block;box-sizing:border-box;font-size:0;max-height:100vmin;height:50vmin;width:50vmin;overflow:hidden;transition: transform 0.2s;}
 .stories.carousel .story > a > .img > * {display:block;box-sizing:border-box;height:100%;width:100%;background-size:cover;background-position: center;}
-.stories.carousel .story > a > .info {display:inline-block;margin-top:.5em;line-height:1.2em;width:100%;overflow:hidden;text-overflow:ellipsis}
+.stories.carousel .story > a > .info {display:inline-block;margin-top:5vmin;line-height:1.2em;width:100%;white-space:pre-wrap;font-size:x-large;}
 .stories.carousel .story > a > .info strong {font-weight:300;}
 .stories.carousel .story > a > .info .time {display: none;}
 .stories.carousel .story > .items {display:none;}
@@ -112,4 +112,59 @@
 	
 	#zuck-modal-content .story-viewer .tip{font-size:14px;padding:6px 12px;}
 	#zuck-modal-content .story-viewer .head .left .time,#zuck-modal-content .story-viewer .head .right .close{display:none;}
+}
+
+.stories.carousel .story {
+    -webkit-animation: breathing 5s ease-out infinite normal;
+    animation: breathing 5s ease-out infinite normal;
+    -webkit-font-smoothing: antialiased;  
+    }
+
+
+@-webkit-keyframes breathing {
+  0% {
+    -webkit-transform: scale(0.98);
+    transform: scale(0.98);
+  }
+
+  25% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  60% {
+    -webkit-transform: scale(0.98);
+    transform: scale(0.98);
+  }
+
+  100% {
+    -webkit-transform: scale(0.98);
+    transform: scale(0.98);
+  }
+}
+
+@keyframes breathing {
+  0% {
+    -webkit-transform: scale(0.98);
+    -ms-transform: scale(0.98);
+    transform: scale(0.98);
+  }
+
+  25% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  60% {
+    -webkit-transform: scale(0.98);
+    -ms-transform: scale(0.98);
+    transform: scale(0.98);
+  }
+
+  100% {
+    -webkit-transform: scale(0.98);
+    -ms-transform: scale(0.98);
+    transform: scale(0.98);
+  }
 }
